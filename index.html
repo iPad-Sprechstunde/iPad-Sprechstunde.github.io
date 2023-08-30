@@ -8,10 +8,9 @@
 </style>
 <script>
 
-function myFunction() {
+function copyLink() {
   // Get the text field
-  var copyText = document.getElementById("myInput");
-
+  var copyText = "test";
   // Select the text field
   copyText.select();
   copyText.setSelectionRange(0, 99999); // For mobile devices
@@ -34,11 +33,8 @@ function myFunction() {
 
 <p>Hier gibt es die Tutorials f&uuml;r den Kurzbefehl: <a href="https://github.com/iPad-Sprechstunde/Kurzbefehl/raw/main/Tutorials/Tutorials.ips" download="tutorials.ips">Download</a> </p>
 
-<!-- The text field -->
-<input type="text" value="Hello World" id="myInput">
-
 <!-- The button used to copy the text -->
-<button onclick="myFunction()">Copy text</button>
+<button onclick="copyLink()">Link kopieren</button>
 
 <p>Oder schicke uns eine Mail an <a href="mailto:ipad-sprechstunde@bergschule-heiligenstadt.de">ipad-sprechstunde@bergschule-heiligenstadt.de</a></p>
 
