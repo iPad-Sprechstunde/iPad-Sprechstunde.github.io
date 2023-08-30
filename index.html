@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <header>
 
-<p class="">Logo<p>
+<p class="logo" id="logos">Logo<p>
   
 </header>
 <style>
 .hintergrund{
   background-color:#FFFFFF;
 }
-.Logo{
+.logo{
   position:absolute;
   
 }
 </style>
 <script>
 
+let logos = document-getElementById('logos');
+window. addEventListener ('scroll', function (){
+let value = window.scrollY;
+logos.style.left = value * 0.25 + 'px';
+})
+
+
+
+  
 function copyLink() {
   // Get the text field
   var copyText = "test";
