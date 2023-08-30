@@ -6,11 +6,24 @@
 }
 
 </style>
-<skript>
+<script>
 
+function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
 
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
+  // Alert the copied text
+  alert("Copied the text: " + copyText.value);
+}
   
-</skript>
+</script>
 <title>iPad-Sprechstunde</title>
 <body class= "hintergrund">
 <h1>Willkommen auf der Website der iPad-Sprechstunde!</h1>
@@ -20,6 +33,12 @@
 <p>Lade unseren Installer f&uuml;r den Fehlerbehebungs-Kurzbefehl herunter: <a href="https://github.com/iPad-Sprechstunde/Kurzbefehl/raw/main/shortcuts/installer/iPad-Sprechstunden_Installer.shortcut">Download</a> </p>
 
 <p>Hier gibt es die Tutorials f&uuml;r den Kurzbefehl: <a href="https://github.com/iPad-Sprechstunde/Kurzbefehl/raw/main/Tutorials/Tutorials.ips" download="tutorials.ips">Download</a> </p>
+
+<!-- The text field -->
+<input type="text" value="Hello World" id="myInput">
+
+<!-- The button used to copy the text -->
+<button onclick="myFunction()">Copy text</button>
 
 <p>Oder schicke uns eine Mail an <a href="mailto:ipad-sprechstunde@bergschule-heiligenstadt.de">ipad-sprechstunde@bergschule-heiligenstadt.de</a></p>
 
