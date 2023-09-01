@@ -1,31 +1,25 @@
 <!DOCTYPE html>
 <header>
 
-<img src="/resources/beispielbild.jpeg" class="logo" id="logos"></img>
+
   
 </header>
 
 <link rel="stylesheet" href="/resources/style.css">
 
-<script>
 
-let logos = document-getElementById("logos");
-window.addEventListener ("scroll",function(){
-let value = window.scroll;
-logos.style.top = value * 1.25 + "px";
-})
-  
-</script>
 
-<title>iPad-Sprechstunde</title>
 
 <body class= "hintergrund">
 
-<h1>Willkommen auf der Website der iPad-Sprechstunde!</h1>
+<h1 class="tit" id="demo" >Willkommen auf der Website der iPad-Sprechstunde!</h1>
 
-<br>
-
+<div class="kopfteil"></div>
+<div class="kurtzbefel">
 <p>Lade unseren Fehlerbehebungs-Kurzbefehl herunter: <a href="/install_shortcut/">Anleitung</a>.</p>
+</div>
+
+
 
 <p>Oder schicke uns eine Mail an <a href="mailto:ipad-sprechstunde@bergschule-heiligenstadt.de">ipad-sprechstunde@bergschule-heiligenstadt.de</a></p>
 
@@ -37,4 +31,17 @@ logos.style.top = value * 1.25 + "px";
 
  <a href='http://www.freevisitorcounters.com'>Counters</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=db5481a245b2c0a72acc610b67b1b7b05b744115'></script>
 <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1066707/t/5"></script>
+
+<script>
+
+let scrollposi = 0;
+let demo = document.getElementById("demo");
+addEventListener("scroll", (event) => {
+scrollposi= window.scrollY;
+demo.style.top = scrollposi + "px";
+});
+  
+
+onscroll = (event) => {};
+</script>
 </body>
