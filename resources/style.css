@@ -27,11 +27,6 @@ border-color:#008D00;
 border-radius:5px;
 }
 
-p{
-color:#ffff;
-font-size:30px;
-}
-
 .images{
 position: absolute;
 text-align:right;
@@ -42,4 +37,15 @@ right:50px;
 width:100%;
 height:500px;
 background-image:linear-gradient(#0060CE,#002F49);
+}
+
+
+p{
+color:#ffff;
+font-size:30px;
+}
+
+a{
+color:#ffff;
+font-size:30px;
 }
