@@ -6,7 +6,7 @@ box-sizing: border-box;
 }
 
 
-.menu{
+.main{
 background: #1d2026;
 min-height: 100vh;
 width: 100%;
@@ -43,5 +43,12 @@ margin: 0 20px;
 
 nav ul li a{
 text-decoration: none;
-color: #ff;
+color: #fff;
+}
+
+.contents{
+position: absolute;
+top: -20;
+left: 22%;
+width: 200px;
 }
