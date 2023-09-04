@@ -16,6 +16,7 @@ color: #fff;
 .menu{
 position: fixed;
 top: 0px;
+witdth: 100%;
 }
 
 nav{
