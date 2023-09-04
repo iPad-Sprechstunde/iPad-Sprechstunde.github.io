@@ -13,10 +13,7 @@ width: 100%;
 color: #fff;
 }
 
-.menu{
-position: fixed;
-top: 0px;
-}
+.menu{}
 
 nav{
 background: #1d3030;
@@ -24,6 +21,8 @@ display: flex;
 align-items: center;
 padding: 20px 8%;
 width: 100%;
+position: fixed;
+top: 0px;
 }
 
 
@@ -52,6 +51,6 @@ color: #fff;
 }
 
 .contents{
-margin-top:200px;
+margin-top:180px;
 
 }
