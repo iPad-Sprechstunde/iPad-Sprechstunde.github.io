@@ -3,33 +3,36 @@
 
 <head>
 
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>iPad-Sprechstunden-Website</title>
 
-<link rel="stylesheet" href="/resources/style.css">
+<link rel="stylesheet" href="resources/style.css">
 
 </head>
-<body>
+<body class="main">
 
 
-<div class="main">
 
-<div class="menu">
-<a href="/"><img src="/resources/beispielbild.jpeg" class="logo"></a>
+  
+<nav class="menu">
+<a href="/"><img src="resources/kurtzbefel-icon.jpeg" class="logo"></a>
 <ul>
 <li><a href="/install_shortcut/">Kurzbefehl</a></li>
 <li><a href="/sitemap/">Sitemap</a></1i>
 <li><a href="/hinweise/">Hinweise</a></li>
 <li><a href="/impressum/">Impresum</a></li>
 </ul>
-</div>
+</nav>
 
 
 <div class="contents">
 
-<h1>iPad-Sprechstunde</h1>
+<h1 class="uberschrift">iPad-Sprechstunde</h1>
 
-<p>Lade unseren Fehlerbehebungs-Kurzbefehl herunter: <a href="/install_shortcut/">Anleitung</a>.</p>
-
+<div class="start_ebene"></div>
+<div class="kurtzbefehltext" id="kurtzbefeltextjs">
+<p>Lade unseren Fehlerbehebungs-Kurzbefehl herunter:<br> <button onclick="anleitung()"  class="knopf">Anleitung</button></p>
+</div>
 <p>Oder schicke uns eine Mail an <a href="mailto:ipad-sprechstunde@bergschule-heiligenstadt.de">ipad-sprechstunde@bergschule-heiligenstadt.de</a></p>
 
 <p>Und lese dir die <a href="/hinweise/">Hinweise</a> &uuml;ber die iPad-Sprechstunde und die Website durch.</p>
@@ -43,6 +46,21 @@
 
 </div>
 
-</div>
+
+<script>
+function anleitung(){
+	window.location="/";
+};
+
+let scrollposi =0;
+let kurtzbefeltextjs = document.getElementById ("kurtzbefeltextjs");
+addEventListener("scroll", (event) => {
+scrollposi= window.scrollY*4;
+scrollposi=scrollposi-800;
+kurtzbefeltextjs.style.left = scrollposi +"px";
+});
+
+onscroll = (event) => {};
+</script>
 </body>
 </html>
