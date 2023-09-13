@@ -11,7 +11,7 @@ rotate: 193deg;
 min-height: 100vh;
 width: 100%;
 color: #fff;
-background-colour: linear-gradient (93deg, purple, blue, cyan, green, yellow);
+background-image: linear-gradient (purple, blue, cyan, green, yellow);
 }
 
 .menu{}
