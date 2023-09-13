@@ -6,15 +6,12 @@ box-sizing: border-box;
 rotate: 193deg;
 }
 
-body{
- background-image: linear-gradient (90deg, purple, blue, cyan, green, yellow, red, black);
-}
 
 .main{
-background: #232530;
 min-height: 100vh;
 width: 100%;
 color: #fff;
+background-image: linear-gradient (93deg, purple, blue, cyan, green, yellow, red, black);
 }
 
 .menu{}
