@@ -7,7 +7,7 @@ box-sizing: border-box;
 
 
 .main{
-background: #232530;
+background-image: linear-gradient (93deg, purple, blue, cyan, green, yellow, red, black);
 min-height: 100vh;
 width: 100%;
 color: #fff;
