@@ -62,10 +62,12 @@ let scrollposi =0;
 let kurtzbefeltextjs = document.getElementById ("kurtzbefeltextjs");
 let mainjs = document.getElementById ("mainjs");
 addEventListener("scroll", (event) => {
+if (scrollposi<360){
 scrollposi= window.scrollY*4;
 scrollposi=scrollposi-800;
 kurtzbefeltextjs.style.left = scrollposi +"px";
 kurtzbefeltextjs.style.rotate= scrollposi+"deg";
+}
 document.getElementById("menujs").innerHTML = "deine scroll position ist " + scrollposi ;
 
 
