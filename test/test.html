@@ -17,7 +17,7 @@
 
 
   
-<nav class="menu">
+<nav class="menu" id="menujs">
 <a href="/"><img src="/resources/beispielbild.jpeg" class="logo"></a>
 <ul>
 <li><a href="/install_shortcut/">Kurzbefehl</a></li>
@@ -66,7 +66,7 @@ scrollposi= window.scrollY*4;
 scrollposi=scrollposi-800;
 kurtzbefeltextjs.style.left = scrollposi +"px";
 kurtzbefeltextjs.style.rotate= scrollposi+"deg";
-kurtzbefeltextjs.innerHTML = "deine scroll position ist " + scrollposi ;
+document.getElementById("menujs").innerHTML = "deine scroll position ist " + scrollposi ;
 
 
 });
