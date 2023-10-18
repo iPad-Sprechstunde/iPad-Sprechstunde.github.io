@@ -5,8 +5,8 @@ font-family: 'poppins', sans-serif;
 box-sizing: border-box;
 }
 
-a{
-  text-color: #3DAB79;
+.contents a{
+  color: #3DAB79;
 
 }
 
