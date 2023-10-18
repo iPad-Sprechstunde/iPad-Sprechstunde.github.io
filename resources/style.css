@@ -5,6 +5,16 @@ font-family: 'poppins', sans-serif;
 box-sizing: border-box;
 }
 
+.contents a{
+  color: #3DAB79;
+
+}
+
+button{
+  color: #ffff;
+  background-color: #3DAB79;
+  radius: 25px;
+}
 
 .main{
 background: #232530;
