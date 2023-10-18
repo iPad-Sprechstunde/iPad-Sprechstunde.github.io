@@ -5,6 +5,10 @@ font-family: 'poppins', sans-serif;
 box-sizing: border-box;
 }
 
+a{
+  text-color: #3DAB79;
+
+}
 
 .main{
 background: #232530;
