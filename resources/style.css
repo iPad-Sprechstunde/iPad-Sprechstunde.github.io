@@ -15,8 +15,8 @@ button{
   color: #ffff;
   background-color: #3DAB79;
   border: none;
-  padding: 15px 32px;
-  radius: 25px;
+  padding: 8px 15px;
+  border-radius: 12px;
 }
 
 .main{
