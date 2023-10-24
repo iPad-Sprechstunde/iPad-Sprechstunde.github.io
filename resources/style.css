@@ -13,10 +13,10 @@ box-sizing: border-box;
 
 button{
   color: #ffff;
-  font-size: 16px;
+  font-size: 26px;
   background-color: #3DAB79;
   border: none;
-  padding: 8px 15px;
+  padding: 10px 25px;
   border-radius: 12px;
 }
 
