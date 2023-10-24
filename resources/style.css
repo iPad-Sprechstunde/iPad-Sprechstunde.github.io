@@ -8,7 +8,7 @@ box-sizing: border-box;
 .contents a{
   color: #3DAB79;
   font-weight: 700;
-
+  text-decoration: none;
 }
 
 button{
