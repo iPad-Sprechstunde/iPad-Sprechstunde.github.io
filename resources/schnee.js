@@ -34,7 +34,6 @@ document.body.appendChild(create);
 function fall(){
 
     for(let p=u;p<=i;p=p+1 ){
-        document.getElementById("name").innerHTML =p;
     fallschnee = document.getElementById("schnee"+p);
     fallschnee.style.top = (fallschnee.offsetTop +2)+"px";
     if(fallschnee.offsetTop >bildschirm_h-50){
