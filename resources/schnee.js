@@ -18,7 +18,7 @@ function random(){
 if(i<=anzahl){
 i=i+1;
 const create = document.createElement("img");
-create.src = "Schneeflocke.png";
+create.src = "/resources/Schneeflocke.png";
 create.alt = "schnee";
 create.id = "schnee"+i;
 create.style.position = "fixed";
