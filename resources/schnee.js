@@ -1,12 +1,11 @@
-let groese = 10;
+let hoehe = 10;
 let breite = 10;
 let zeit = 4000;
-let abstant = 5;
+let abstand = 5;
 let fallgeschwindikeit = 50;
 let i=0;
 let u=1;
-
-
+let anzahl=100;
 
 
 //bild = document.getElementById("schnee")
@@ -16,20 +15,21 @@ bildschirm_h = screen.height;
 setInterval(random,zeit);
 setInterval(fall,fallgeschwindikeit);
 function random(){
-if(i<=99){
+if(i<=anzahl){
 i=i+1;
-const ople = document.createElement("img");
-ople.src = "Schneflocke.png";
-ople.alt = "schnee";
-ople.id = "schnee"+i;
-ople.style.position = "fixed";
-ople.style.top = abstant+"px";
-ople.style.width = groese+"px";
-ople.style.width = breite+"px";
-ople.style.left = Math.round(Math.random()*bildschirm_b)+'px';
-document.body.appendChild(ople);
+const create = document.createElement("img");
+create.src = "Schneeflocke.png";
+create.alt = "schnee";
+create.id = "schnee"+i;
+create.style.position = "fixed";
+create.style.top = abstand+"px";
+create.style.width = hoehe+"px";
+create.style.width = breite+"px";
+create.style.left = Math.round(Math.random()*bildschirm_b)+'px';
+document.body.appendChild(create);
+	}
 }
-}
+
 
 function fall(){
 
@@ -39,6 +39,6 @@ function fall(){
     fallschnee.style.top = (fallschnee.offsetTop +2)+"px";
     if(fallschnee.offsetTop >bildschirm_h-50){
         fallschnee.style.top = (5)+"px";
-    }
+    	  }
+     }
 }
-    }
