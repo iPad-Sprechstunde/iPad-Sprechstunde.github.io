@@ -5,7 +5,7 @@ let abstand = 5;
 let fallgeschwindikeit = 50;
 let i=0;
 let u=1;
-let anzahl=100;
+let anzahl=300;
 
 
 //bild = document.getElementById("schnee")
@@ -25,7 +25,7 @@ create.style.position = "fixed";
 create.style.top = abstand+"px";
 create.style.width = hoehe+"px";
 create.style.width = breite+"px";
-create.style.left = Math.round(Math.random()*bildschirm_h)+'px';
+create.style.left = Math.round(Math.random()*(bildschirm_h - hoehe))+'px';
 document.body.appendChild(create);
 	}
 }
