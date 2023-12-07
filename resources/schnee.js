@@ -5,8 +5,8 @@ let abstand = 5;
 let fallgeschwindikeit = 50;
 let i=0;
 let u=1;
-let anzahl=300;
-
+let anzahl=100;
+const Schneeflocken_a = [Math.random()*3];
 
 //bild = document.getElementById("schnee")
 bildschirm_b = screen.width;
@@ -17,27 +17,41 @@ setInterval(fall,fallgeschwindikeit);
 function random(){
 if(i<=anzahl){
 i=i+1;
+Schneeflocken_a[Schneeflocken_a.length] = Math.random()*3;
 const create = document.createElement("img");
-create.src = "/resources/Schneeflocke.png";
+create.src = "resources/Schneeflocke.png";
 create.alt = "schnee";
 create.id = "schnee"+i;
 create.style.position = "fixed";
 create.style.top = abstand+"px";
 create.style.width = hoehe+"px";
 create.style.width = breite+"px";
-create.style.left = Math.round(Math.random()*(bildschirm_h - hoehe))+'px';
+create.style.left = Math.round(Math.random()*bildschirm_b)+'px';
 document.body.appendChild(create);
 	}
 }
+
 
 
 function fall(){
 
     for(let p=u;p<=i;p=p+1 ){
     fallschnee = document.getElementById("schnee"+p);
-    fallschnee.style.top = (fallschnee.offsetTop +2)+"px";
+    if(Schneeflocken_a[p] > 2){
+    fallschnee.style.left =(fallschnee.offsetLeft +2)+"px";
+    }
+    if(Schneeflocken_a[p] < 2){
+    fallschnee.style.left =(fallschnee.offsetLeft -2)+"px";
+    }
+    if(fallschnee.offsetLeft < 0){
+        fallschnee.style.left =(bildschirm_b)+"px";
+    }
+    if(fallschnee.offsetLeft >bildschirm_b){
+        fallschnee.style.left =(0)+"px";
+    }
     if(fallschnee.offsetTop >bildschirm_h-50){
         fallschnee.style.top = (5)+"px";
     	  }
-     }
+    fallschnee.style.top = (fallschnee.offsetTop +2)+"px";
+    }
 }
