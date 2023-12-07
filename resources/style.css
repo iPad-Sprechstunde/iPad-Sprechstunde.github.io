@@ -20,6 +20,28 @@ button{
   border-radius: 12px;
 }
 
+.schnee_unterererrant{
+background-image: url(schnee.png);
+background-size: 100% 50px;
+width:100%;
+height: 50px;
+display: flex;
+position: fixed;
+bottom: 0px;
+}
+
+.winter_image{
+  margin-top: 150px;
+  background-image: url(winter_hintergrund.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+	justify-content: center;
+}
+
 .main{
 background: #232530;
 min-height: 100vh;
@@ -65,12 +87,14 @@ color: #fff;
 }
 
 .contents{
-margin-top:180px;
+margin-top:15px;
 font-size: 20px;
 margin-left: 30px;
 }
 
 .uberschrift{
-  text-align:center;
+  text-shadow: 2px 2px 5px #000000;
+  color: #3DAB79;
+  text-align: center;
   font-size: 30px;
 }
