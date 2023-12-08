@@ -19,14 +19,14 @@ if(i<=anzahl){
 i=i+1;
 Schneeflocken_a[Schneeflocken_a.length] = Math.random()*3;
 const create = document.createElement("img");
-create.src = "resources/Schneeflocke.png";
+create.src = "/resources/Schneeflocke.png";
 create.alt = "schnee";
 create.id = "schnee"+i;
 create.style.position = "fixed";
 create.style.top = abstand+"px";
 create.style.width = hoehe+"px";
 create.style.width = breite+"px";
-create.style.left = Math.round(Math.random()*bildschirm_b)+'px';
+create.style.left = Math.round(Math.random()*(bildschirm_h - hoehe))+'px';
 document.body.appendChild(create);
 	}
 }
