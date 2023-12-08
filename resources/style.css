@@ -20,7 +20,7 @@ button{
   border-radius: 12px;
 }
 
-.schnee_unterererrant{
+.schnee_bottom{
 background-image: url(schnee.png);
 background-size: 100% 50px;
 width:100%;
@@ -92,7 +92,7 @@ font-size: 20px;
 margin-left: 30px;
 }
 
-.uberschrift{
+.ueberschrift{
   text-shadow: 2px 2px 5px #000000;
   color: #3DAB79;
   text-align: center;
