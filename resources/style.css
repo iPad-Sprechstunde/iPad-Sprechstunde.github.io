@@ -11,6 +11,12 @@ box-sizing: border-box;
   text-decoration: none;
 }
 
+winter_contents a{
+  color: #3DAB79;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 button{
   color: #ffff;
   font-size: 20px;
