@@ -38,10 +38,10 @@ function fall(){
     for(let p=u;p<=i;p=p+1 ){
     fallschnee = document.getElementById("schnee"+p);
     if(Schneeflocken_a[p] > 2){
-    fallschnee.style.left =(fallschnee.offsetLeft + (Schneeflocken_a*1))+"px";
+    fallschnee.style.left =(fallschnee.offsetLeft + (Schneeflocken_a-1))+"px";
     }
     if(Schneeflocken_a[p] < 2){
-    fallschnee.style.left =(fallschnee.offsetLeft -(Schneeflocken_a*1.2))+"px";
+    fallschnee.style.left =(fallschnee.offsetLeft -(Schneeflocken_a+1))+"px";
     }
     if(fallschnee.offsetLeft < 0){
         fallschnee.style.left =(bildschirm_h)+"px";
