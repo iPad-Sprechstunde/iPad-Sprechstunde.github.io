@@ -17,7 +17,7 @@ setInterval(fall,fallgeschwindikeit);
 function random(){
 if(i<=anzahl){
 i=i+1;
-Schneeflocken_a[Schneeflocken_a.length+1] = Math.random()*3;
+Schneeflocken_a[Schneeflocken_a.length] = Math.random()*3;
 const create = document.createElement("img");
 create.src = "/resources/Schneeflocke.png";
 create.alt = "schnee";
@@ -38,10 +38,10 @@ function fall(){
     for(let p=u;p<=i;p=p+1 ){
     fallschnee = document.getElementById("schnee"+p);
     if(Schneeflocken_a[p] > 2){
-    fallschnee.style.left =(fallschnee.offsetLeft + (Schneeflocken_a-1))+"px";
+    fallschnee.style.left =(fallschnee.offsetLeft + (Schneeflocken_a[p]-1))+"px";
     }
     if(Schneeflocken_a[p] < 2){
-    fallschnee.style.left =(fallschnee.offsetLeft -(Schneeflocken_a+1))+"px";
+    fallschnee.style.left =(fallschnee.offsetLeft -(Schneeflocken_a[p]+1))+"px";
     }
     if(fallschnee.offsetLeft < 0){
         fallschnee.style.left =(bildschirm_h)+"px";
