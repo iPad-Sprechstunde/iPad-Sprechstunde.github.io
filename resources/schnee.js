@@ -17,7 +17,7 @@ setInterval(fall,fallgeschwindikeit);
 function random(){
 if(i<=anzahl){
 i=i+1;
-Schneeflocken_a[Schneeflocken_a.length] = Math.random()*3;
+Schneeflocken_a[Schneeflocken_a.length+1] = Math.random()*3;
 const create = document.createElement("img");
 create.src = "/resources/Schneeflocke.png";
 create.alt = "schnee";
