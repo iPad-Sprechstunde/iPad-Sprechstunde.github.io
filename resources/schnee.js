@@ -44,9 +44,9 @@ function fall(){
     fallschnee.style.left =(fallschnee.offsetLeft -(Schneeflocken_a[p]+1))+"px";
     }
     if(fallschnee.offsetLeft < 0){
-        fallschnee.style.left =(bildschirm_h)+"px";
+        fallschnee.style.left =(bildschirm_b)+"px";
     }
-    if(fallschnee.offsetLeft >bildschirm_h){
+    if(fallschnee.offsetLeft >bildschirm_b){
         fallschnee.style.left =(0)+"px";
     }
     if(fallschnee.offsetTop >bildschirm_h-50){
