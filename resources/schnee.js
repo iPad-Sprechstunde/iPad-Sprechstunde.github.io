@@ -26,7 +26,7 @@ create.style.position = "fixed";
 create.style.top = abstand+"px";
 create.style.width = hoehe+"px";
 create.style.width = breite+"px";
-create.style.left = Math.round(Math.random()*(bildschirm_h - hoehe))+'px';
+create.style.left = Math.round(Math.random()*(bildschirm_b - hoehe))+'px';
 document.body.appendChild(create);
 	}
 }
