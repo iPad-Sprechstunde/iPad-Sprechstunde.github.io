@@ -26,7 +26,7 @@ create.style.position = "fixed";
 create.style.top = abstand+"px";
 create.style.width = hoehe+"px";
 create.style.width = breite+"px";
-create.style.left = Math.round(Math.random()*(bildschirm_h - hoehe))+'px';
+create.style.left = Math.round(Math.random()*(bildschirm_b - hoehe))+'px';
 document.body.appendChild(create);
 	}
 }
@@ -38,10 +38,10 @@ function fall(){
     for(let p=u;p<=i;p=p+1 ){
     fallschnee = document.getElementById("schnee"+p);
     if(Schneeflocken_a[p] > 2){
-    fallschnee.style.left =(fallschnee.offsetLeft + (Schneeflocken_a-1))+"px";
+    fallschnee.style.left =(fallschnee.offsetLeft + (Schneeflocken_a[p]-1))+"px";
     }
     if(Schneeflocken_a[p] < 2){
-    fallschnee.style.left =(fallschnee.offsetLeft -(Schneeflocken_a+1))+"px";
+    fallschnee.style.left =(fallschnee.offsetLeft -(Schneeflocken_a[p]+1))+"px";
     }
     if(fallschnee.offsetLeft < 0){
         fallschnee.style.left =(bildschirm_h)+"px";
