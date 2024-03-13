@@ -1,9 +1,10 @@
 let i= 0;
 let t= 100;
+let k=0;
 let grassspawner = setInterval(spawn, 1);
-setInterval(wachsen, 1);
+setInterval(wachsen, 0.1);
 function spawn(){
-    if(i <= 500){
+    if(k <= screen.width){
         let creat = document.createElement("div");
         creat.id = "Grashalm" + i;
         creat.addEventListener("mousemove",(e) =>{
@@ -26,14 +27,14 @@ function spawn(){
         creat.style.left = (i*2)+"px";
         document.body.appendChild(creat);
         i++;
+        k=i*2;
     }else{
         clearInterval(grassspawner);
     }
 }
 
 function wachsen(){
-        document.getElementById("test").innerHTML += "test1";
-        let grass = document.getElementById("Grashalm"+Math.floor(Math.random()*500));
+        let grass = document.getElementById("Grashalm"+Math.floor(Math.random()*(i-1));
         grass.style.height = grass.scrollHeight + 1+"px";
         //for (let p = 0; p <= i; p++) {}
 }
