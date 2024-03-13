@@ -1,10 +1,9 @@
 let i= 0;
 let t= 100;
-let k=0;
 let grassspawner = setInterval(spawn, 1);
 setInterval(wachsen, 0.1);
 function spawn(){
-    if(k <= screen.width){
+    if(i*2 <= screen.width){
         let creat = document.createElement("div");
         creat.id = "Grashalm" + i;
         creat.addEventListener("mousemove",(e) =>{
@@ -27,7 +26,6 @@ function spawn(){
         creat.style.left = (i*2)+"px";
         document.body.appendChild(creat);
         i++;
-        k=i*2;
     }else{
         clearInterval(grassspawner);
     }
