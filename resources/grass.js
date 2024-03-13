@@ -32,7 +32,7 @@ function spawn(){
 }
 
 function wachsen(){
-        document.getElementById("test").innerHTML = "test1";
+        document.getElementById("test").innerHTML += "test1";
         let grass = document.getElementById("Grashalm"+Math.floor(Math.random()*500));
         grass.style.height = grass.scrollHeight + 1;
         //for (let p = 0; p <= i; p++) {}
