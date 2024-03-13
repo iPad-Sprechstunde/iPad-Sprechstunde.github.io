@@ -1,6 +1,6 @@
 let i= 0;
 let t= 100;
-setInterval(spawn, 1);
+let grassspawner = setInterval(spawn, 1);
 setInterval(wachsen, 1);
 function spawn(){
     if(i <= 500){
@@ -26,6 +26,8 @@ function spawn(){
         creat.style.left = (i*2)+"px";
         document.body.appendChild(creat);
         i++;
+    }else{
+        clearInterval(grassspawner);
     }
 }
 
