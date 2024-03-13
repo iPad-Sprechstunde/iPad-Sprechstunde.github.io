@@ -1,7 +1,7 @@
 let i= 0;
 let t= 100;
 setInterval(spawn, 1);
-setInterval(wachsen, 0.1);
+setInterval(wachsen, 1);
 function spawn(){
     if(i <= 500){
         let creat = document.createElement("div");
