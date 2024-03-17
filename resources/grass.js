@@ -22,7 +22,7 @@ function spawn(){
         creat.style.bottom = 0+"px";
         creat.style.width = 2+"px";
         creat.style.height = 20+"px";
-        creat.style.backgroundImage = "linear-gradient(to top, rgb(0,"+Math.floor(Math.random() * 10) + 0+",0) 0%, rgb("+0+","+Math.floor(Math.random() * 100) + 155+","+0+") 100%)";
+        creat.style.backgroundImage = "linear-gradient(to top, rgb(0,100,0) 0%, rgb("+20+","+255+","+35+") 100%)";
         creat.style.left = (i*2)+"px";
         document.body.appendChild(creat);
         i++;
