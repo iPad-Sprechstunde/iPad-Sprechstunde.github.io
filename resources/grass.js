@@ -30,7 +30,7 @@ function spawn(){
 }
 
 function wachsen(){
-        let grass = document.getElementById("Grashalm"+Math.floor(Math.random()*(i-1));
+        let grass = document.getElementById("Grashalm"+Math.floor(Math.random()*(i-1)));
         grass.style.height = grass.scrollHeight + 1+"px";
         //for (let p = 0; p <= i; p++) {}
 }
