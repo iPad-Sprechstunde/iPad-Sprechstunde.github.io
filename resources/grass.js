@@ -1,5 +1,6 @@
 let i= 0;
 let t= 100;
+document.getElementById("test").inerHTML ="heloooo";
 setInterval(spawn, 1);
 setInterval(wachsen, 0.1);
 function spawn(){
