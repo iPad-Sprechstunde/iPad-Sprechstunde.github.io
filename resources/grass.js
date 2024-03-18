@@ -4,6 +4,7 @@ document.getElementById("test").innerHTML ="heloooo";
 setInterval(spawn, 1);
 setInterval(wachsen, 0.1);
 function spawn(){
+        if(i<=800){
         let creat = document.createElement("div");
         creat.id = "Grashalm" + i;
         creat.addEventListener("mousemove",(e) =>{
@@ -26,6 +27,7 @@ function spawn(){
         creat.style.left = (i*2)+"px";
         document.body.appendChild(creat);
         i++;
+        }
     
 }
 
