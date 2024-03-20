@@ -13,8 +13,12 @@ function spawn(){
         let nummer = parseInt(creat.id.slice(8));
         let ein_v = document.getElementById("Grashalm"+(creat.id.slice(8)-1));
         let ein_n = document.getElementById("Grashalm"+(nummer+1));
+        if(ein_v.scrollHeight > hohe-y){
         ein_v.style.height =hohe-y +"px"; 
+        }
+        if(ein_n.scrollHeight > hohe-y){
         ein_n.style.height =hohe-y +"px"; 
+       }
     });
         creat.style.position = "fixed";
         let random = Math.floor(Math.random() * 250) + 100
