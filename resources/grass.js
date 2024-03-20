@@ -1,8 +1,7 @@
 let i= 0;
 let t= 100;
-document.getElementById("test").innerHTML ="heloooo";
 setInterval(spawn, 1);
-setInterval(wachsen, 0.1);
+setInterval(wachsen, 0.01);
 function spawn(){
         if(i<=800){
         let creat = document.createElement("div");
