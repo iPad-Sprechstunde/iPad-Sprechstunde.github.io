@@ -1,1 +1,12 @@
-{"release":{"version":19.1.0","URL":"https://ipad-sprechstunde.github.io/resources/shortcuts/release/iPad-Sprechstunde_19.1.0.shortcut","changelog":"- iPS-AI hinzugefügt"},"beta":{"version":"19.1.1","URL":"https://ipad-sprechstunde.github.io/resources/shortcuts/beta/iPad-Sprechstunde_19.1.1.shortcut","changelog":"\n - Funktion zum Deaktivieren von KI-Features hinzugefügt"}}
+{
+  "release": {
+    "version": "19.1.0",
+    "URL": "https://ipad-sprechstunde.github.io/resources/shortcuts/release/iPad-Sprechstunde_19.1.0.shortcut",
+    "changelog": "- iPS-AI hinzugefügt"
+  },
+  "beta": {
+    "version": "19.1.1",
+    "URL": "https://ipad-sprechstunde.github.io/resources/shortcuts/beta/iPad-Sprechstunde_19.1.1.shortcut",
+    "changelog": "\n - Funktion zum Deaktivieren von KI-Features hinzugefügt"
+  }
+}
