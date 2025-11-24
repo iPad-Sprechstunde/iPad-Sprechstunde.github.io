@@ -6,8 +6,8 @@ const snowflakeFallSpeed = 50; // Speed at which snowflakes fall (in millisecond
 const maxSnowflakes = 100; // Maximum number of snowflakes on screen
 const snowflakeMovementRandomness = Array(maxSnowflakes).fill().map(() => Math.random() * 3); // Randomness for snowflake movement
 
-const screenWidth = screen.width; // Width of the screen
-const screenHeight = screen.height; // Height of the screen
+const screenWidth = window.innerWidth; // Width of the screen (viewport)
+const screenHeight = window.innerHeight; // Height of the screen (viewport)
 
 let snowflakes = []; // Array to store snowflake elements
 
@@ -19,14 +19,16 @@ function createSnowflake() {
   if (snowflakes.length < maxSnowflakes) {
     // Create a new snowflake only if we haven't reached the limit
     let snowflake = document.createElement("img");
-    snowflake.src = "/resources/Schneeflocke.png";
+    snowflake.src = "/resources/Schneeflocke.png"; // Path to your snowflake image
     snowflake.alt = "snowflake";
     snowflake.classList.add('snowflake');
     snowflake.style.position = "fixed";
     snowflake.style.top = initialVerticalPosition + "px"; // Start at a fixed vertical position
     snowflake.style.width = snowflakeHeight + "px"; // Set width of snowflake
     snowflake.style.height = snowflakeWidth + "px"; // Set height of snowflake
-    snowflake.style.left = Math.round(Math.random() * (screenWidth - snowflakeHeight)) + 'px'; // Random horizontal position
+
+    // Adjust the left position to ensure the snowflakes span the full width of the screen
+    snowflake.style.left = Math.round(Math.random() * (screenWidth - snowflakeWidth)) + 'px'; // Ensure full width
     
     // Add the snowflake to the body and store it in the array
     document.body.appendChild(snowflake);
