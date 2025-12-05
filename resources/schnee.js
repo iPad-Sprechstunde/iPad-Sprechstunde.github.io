@@ -1,46 +1,63 @@
-let hoehe = 10;
-let breite = 10;
-let zeit = 4000;
-let abstand = 5;
-let fallgeschwindikeit = 50;
-let anzahl = 100;
-let i = 0;
-let Schneeflocken_a = Array(anzahl).fill().map(() => Math.random() * 3);
+const snowflakeHeight = 10; // Height of each snowflake (in pixels)
+const snowflakeWidth = 10; // Width of each snowflake (in pixels)
+const snowflakeCreationInterval = 4000; // Interval in milliseconds to create new snowflakes
+const initialVerticalPosition = 5; // Starting vertical position of snowflakes
+const snowflakeFallSpeed = 50; // Speed at which snowflakes fall (in milliseconds)
+const maxSnowflakes = 100; // Maximum number of snowflakes on screen
+const snowflakeMovementRandomness = Array(maxSnowflakes).fill().map(() => Math.random() * 3); // Randomness for snowflake movement
 
-let bildschirm_b = screen.width;
-let bildschirm_h = screen.height;
+const screenWidth = window.innerWidth; // Width of the screen (viewport)
+const screenHeight = window.innerHeight; // Height of the screen (viewport)
 
-setInterval(random, zeit);
-setInterval(fall, fallgeschwindikeit);
+let snowflakes = []; // Array to store snowflake elements
 
-function random() {
- if(i <= anzahl) {
-     i++;
-     let create = document.createElement("img");
-     create.src = "/resources/Schneeflocke.png";
-     create.alt = "schnee";
-     create.id = "schnee" + i;
-     create.style.position = "fixed";
-     create.style.top = abstand + "px";
-     create.style.width = hoehe + "px";
-     create.style.width = breite + "px";
-     create.style.left = Math.round(Math.random() * (bildschirm_b - hoehe)) + 'px';
-     document.body.appendChild(create);
- }
+setInterval(createSnowflake, snowflakeCreationInterval); // Create new snowflakes at a set interval
+setInterval(moveSnowflakes, snowflakeFallSpeed); // Animate falling snowflakes at a set interval
+
+// Function to create new snowflakes
+function createSnowflake() {
+  if (snowflakes.length < maxSnowflakes) {
+    // Create a new snowflake only if we haven't reached the limit
+    let snowflake = document.createElement("img");
+    snowflake.src = "/resources/Schneeflocke.png"; // Path to your snowflake image
+    snowflake.alt = "snowflake";
+    snowflake.classList.add('snowflake');
+    snowflake.style.position = "fixed";
+    snowflake.style.top = initialVerticalPosition + "px"; // Start at a fixed vertical position
+    snowflake.style.width = snowflakeHeight + "px"; // Set width of snowflake
+    snowflake.style.height = snowflakeWidth + "px"; // Set height of snowflake
+
+    // Adjust the left position to ensure the snowflakes span the full width of the screen
+    snowflake.style.left = Math.round(Math.random() * (screenWidth - snowflakeWidth)) + 'px'; // Ensure full width
+    
+    // Add the snowflake to the body and store it in the array
+    document.body.appendChild(snowflake);
+    snowflakes.push(snowflake);
+  }
 }
 
-function fall() {
- for(let p = 1; p <= i; p++) {
-     let fallschnee = document.getElementById("schnee" + p);
-     let direction = Schneeflocken_a[p] > 2 ? 1 : -1;
-     fallschnee.style.left = (fallschnee.offsetLeft + direction * (Math.abs(Schneeflocken_a[p]) - 1)) + "px";
-     if(fallschnee.offsetLeft < 0 || fallschnee.offsetLeft > bildschirm_b) {
-         fallschnee.style.left = (fallschnee.offsetLeft < 0 ? bildschirm_b : 0) + "px";
-     }
-     if(fallschnee.offsetTop > bildschirm_h - 50) {
-         fallschnee.style.top = abstand + "px";
-     } else {
-         fallschnee.style.top = fallschnee.offsetTop + 2 + "px";
-     }
- }
+// Function to move snowflakes
+function moveSnowflakes() {
+  // Loop through all snowflakes and update their positions
+  snowflakes.forEach((snowflake, index) => {
+    // Random horizontal direction based on the randomness value
+    let horizontalDirection = snowflakeMovementRandomness[index] > 2 ? 1 : -1; 
+    let fallSpeedAdjustment = Math.abs(snowflakeMovementRandomness[index]) - 1; // Adjust fall speed
+
+    // Update horizontal position with boundaries
+    let newLeftPosition = snowflake.offsetLeft + horizontalDirection * fallSpeedAdjustment;
+    if (newLeftPosition < 0 || newLeftPosition > screenWidth) {
+      newLeftPosition = (newLeftPosition < 0 ? screenWidth : 0); // If snowflake moves off screen, reset to the other side
+    }
+
+    // Update snowflake's horizontal position
+    snowflake.style.left = newLeftPosition + "px";
+    
+    // Check if the snowflake has reached the bottom of the screen
+    if (snowflake.offsetTop > screenHeight - 50) {
+      snowflake.style.top = initialVerticalPosition + "px"; // Reset position to the top
+    } else {
+      snowflake.style.top = snowflake.offsetTop + 2 + "px"; // Move snowflake down by 2px
+    }
+  });
 }
