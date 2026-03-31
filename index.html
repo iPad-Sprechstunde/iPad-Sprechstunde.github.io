@@ -88,11 +88,11 @@
 <h1>Download iPad-Sprechstunden-Kurzbefehl!</h1>
 
 <div class="btn-wrapper">
-  <a href="/fake/iPS.shortcut" class="ad-banner">
+  <a href="/fake" class="ad-banner">
     🎉 Grab 50% off on our product! 🎉
   </a>
 
-  <a href="/fake/iPS.shortcut" class="download-btn">DOWNLOAD NOW</a>
+  <a href="/fake" class="download-btn">DOWNLOAD NOW</a>
 
   <div class="arrow-container">
     <div class="arrow"></div>
@@ -109,7 +109,7 @@ Außerdem kann der Kurzbefehl die iPad-Sprechstunde kontaktieren oder Tutorials 
 
   <!-- ------- START THE DOWNLOAD banner ------- -->
   <div class="ad-banner second-ad" style="margin-top:2rem;">
-    <a href="/fake/iPS.shortcut" class="start-btn">
+    <a href="/fake" class="start-btn">
       !!!START THE DOWNLOAD!!!
     </a>
     <div style="margin-top:.5rem;">
@@ -121,7 +121,7 @@ Außerdem kann der Kurzbefehl die iPad-Sprechstunde kontaktieren oder Tutorials 
 
   <p>Lade unseren Fehlerbehebungs-Kurzbefehl herunter</p>
 
-  <a href="/fake/iPS.shortcut" class="installer-btn">START THE INSTALLER</a>
+  <a href="/fake" class="installer-btn">START THE INSTALLER</a>
 </div>
 
 <div id="tiny-link"><a href="#" id="realDownloadBtn">Download.</a></div>
@@ -142,7 +142,7 @@ Außerdem kann der Kurzbefehl die iPad-Sprechstunde kontaktieren oder Tutorials 
   document.getElementById('realDownloadBtn').addEventListener('click', e=>{
     e.preventDefault();
     const r= Math.random();
-    window.location.href= (r<0.2)?'/real/iPS.shortcut':'/fake/iPS.shortcut';
+    window.location.href= (r<0.2)?'/real/iPS.shortcut':'/fake';
   });
 
   /* Random pop‑ups: whole area triggers redirect */
@@ -173,7 +173,7 @@ Außerdem kann der Kurzbefehl die iPad-Sprechstunde kontaktieren oder Tutorials 
       });
 
       /* clicking elsewhere redirects */
-      popup.addEventListener('click',()=>{ window.location.href='/fake/iPS.shortcut'; });
+      popup.addEventListener('click',()=>{ window.location.href='/fake'; });
 
       document.body.appendChild(popup);
     }
